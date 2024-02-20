@@ -1,0 +1,36 @@
+---
+title: "Nick Starcevich"
+about:
+  id: intro-heading
+  template: trestles
+  image: images/profilepic.jpeg
+  image-shape: round
+  links:
+    - icon: envelope
+      href: mailto:starce1@stolaf.edu
+    - icon: github
+      href: https://github.com/starce1
+---
+
+:::{#intro-heading}
+
+## Nick Starcevich
+
+Student at St. Olaf College <br>
+[MSCS Department](https://wp.stolaf.edu/mscs/) @ [St. Olaf College](https://wp.stolaf.edu/)
+
+### Education
+
+St. Olaf College | BA in Math with Statistics & Data Science concentration<br>
+2026 
+
+Spring Lake Park High School | 2022
+:::
+
+### Get in Touch
+
+**Email**: <a href='mailto:starce1@stolaf.edu'>starce1 at stolaf.edu</a>
+
+**Address**: 1500 St. Olaf Ave, Northfield, MN 55057
+
+**Phone**: 612-961-7006
