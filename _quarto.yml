@@ -5,12 +5,21 @@ project:
 website:
   title: "Nick Starcevich"
   navbar:
+    background: primary
+    search: true
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - sidebar:sidebar1
 
-page-footer:
+  sidebar: 
+    - id: sidebar1
+      title: "Maps"
+      contents: 
+        - part1.qmd
+        - part2.qmd
+
+  page-footer:
     left: |
       &copy; Nick Starcevich, 2024<br>
       All content licensed under <i class='bi-badge-cc'></i>
@@ -20,9 +29,10 @@ page-footer:
 
 format:
   html:
-    theme: cosmo
+    theme: sandstone
     css: styles.css
     toc: true
+    code-overflow: wrap
 
-editor: visual
+editor: source
 

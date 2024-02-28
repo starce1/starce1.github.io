@@ -1,0 +1,162 @@
+---
+title: "US States"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| message: false
+#| include: false
+
+library(tidyverse)
+library(dplyr)
+library(ggthemes)
+library(viridis)
+library(maps)
+us_states <- map_data("state")
+us_states |>
+  ggplot(mapping = aes(x = long, y = lat,
+                          group = group)) + 
+  geom_polygon(fill = "white", color = "black")
+```
+
+```{r}
+#| message: false
+#| include: false
+#read in data
+tornado <- read_csv("tornado.csv")
+```
+
+
+```{r}
+#| message: false
+#| echo: false
+tornado |>
+  mutate(st = fct_recode(st, "alabama" = "AL",
+                         "arkansas" = "AR",
+                         "arizona" = "AZ",
+                         "california" = "CA",
+                         "colorado" = "CO",
+                         "connecticut" = "CT",
+                         "district of columbia" = "DC",
+                         "delaware" = "DE",
+                         "florida" = "FL",
+                         "georgia" = "GA",
+                         "iowa" = "IA",
+                         "idaho" = "ID",
+                         "illinois" = "IL",
+                         "indiana" = "IN",
+                         "kansas" = "KS",
+                         "kentucky" = "KY",
+                         "louisiana" = "LA",
+                         "massachusetts" = "MA",
+                         "maryland" = "MD",
+                         "maine" = "ME",
+                         "michigan" = "MI",
+                         "minnesota" = "MN",
+                         "missouri" = "MO",
+                         "mississippi" = "MS",
+                         "montana" = "MT",
+                         "north carolina" = "NC",
+                         "north dakota" = "ND",
+                         "nebraska" = "NE",
+                         "new hampshire" = "NH",
+                         "new jersey" = "NJ",
+                         "new mexico" = "NM",
+                         "nevada" = "NV",
+                         "new york" = "NY",
+                         "ohio" = "OH",
+                         "oklahoma" = "OK",
+                         "oregon" = "OR",
+                         "pennsylvania" = "PA",
+                         "rhode island" = "RI",
+                         "south carolina" = "SC",
+                         "south dakota" = "SD",
+                         "tennessee" = "TN",
+                         "texas" = "TX",
+                         "utah" = "UT",
+                         "virginia" = "VA",
+                         "vermont" = "VT",
+                         "washington" = "WA",
+                         "wisconsin" = "WI",
+                         "west virginia" = "WV",
+                         "wyoming" = "WY")) |>
+  count(st) |>
+  left_join(us_states, by = c("st" = "region")) |>
+  filter(st != "VI" & st != "PR" & st != "AK" & st != "HI") |>
+  ggplot(mapping = aes(x = long, y = lat,
+                          group = group)) + 
+  geom_polygon(aes(fill = n), color = "black") +
+  labs(title = "Number of Tornadoes in Each State Since 1950", caption = "https://www.spc.noaa.gov/wcm/data/1950-2022_all_tornadoes.csv", fill = "Tornado Count") +
+  theme_map() +
+  scale_fill_viridis(option = "plasma")
+```
+
+NOAA defines "violent tornadoes" as tornadoes rated EF4/F4 or higher. Lets see what the map of those looks like!
+
+```{r}
+#| message: false
+#| echo: false
+tornado |>
+  mutate(st = fct_recode(st, "alabama" = "AL",
+                         "arkansas" = "AR",
+                         "arizona" = "AZ",
+                         "california" = "CA",
+                         "colorado" = "CO",
+                         "connecticut" = "CT",
+                         "district of columbia" = "DC",
+                         "delaware" = "DE",
+                         "florida" = "FL",
+                         "georgia" = "GA",
+                         "iowa" = "IA",
+                         "idaho" = "ID",
+                         "illinois" = "IL",
+                         "indiana" = "IN",
+                         "kansas" = "KS",
+                         "kentucky" = "KY",
+                         "louisiana" = "LA",
+                         "massachusetts" = "MA",
+                         "maryland" = "MD",
+                         "maine" = "ME",
+                         "michigan" = "MI",
+                         "minnesota" = "MN",
+                         "missouri" = "MO",
+                         "mississippi" = "MS",
+                         "montana" = "MT",
+                         "north carolina" = "NC",
+                         "north dakota" = "ND",
+                         "nebraska" = "NE",
+                         "new hampshire" = "NH",
+                         "new jersey" = "NJ",
+                         "new mexico" = "NM",
+                         "nevada" = "NV",
+                         "new york" = "NY",
+                         "ohio" = "OH",
+                         "oklahoma" = "OK",
+                         "oregon" = "OR",
+                         "pennsylvania" = "PA",
+                         "rhode island" = "RI",
+                         "south carolina" = "SC",
+                         "south dakota" = "SD",
+                         "tennessee" = "TN",
+                         "texas" = "TX",
+                         "utah" = "UT",
+                         "virginia" = "VA",
+                         "vermont" = "VT",
+                         "washington" = "WA",
+                         "wisconsin" = "WI",
+                         "west virginia" = "WV",
+                         "wyoming" = "WY")) |>
+  filter(mag == 5 | mag == 4) |>
+  count(st) |>
+  full_join(us_states, by = c("st" = "region")) |>
+  filter(st != "VI" & st != "PR" & st != "AK" & st != "HI") |>
+  ggplot(mapping = aes(x = long, y = lat,
+                          group = group)) + 
+  geom_polygon(aes(fill = n), color = "black") +
+  labs(title = "Number of Violent Tornadoes in Each State Since 1950", caption = "https://www.spc.noaa.gov/wcm/data/1950-2022_all_tornadoes.csv", fill = "Violent Tornado Count") +
+  theme_map() +
+  scale_fill_viridis(option = "plasma")
+```
+
+What we gain from these maps is some information about tornadoes by state. The first map shows that they seem to happen just about everywhere, but since Texas is the biggest state it has by far the most. When putting into consideration whether tornadoes are violent or not we get a better idea of where bad tornadoes happen as well as the frequency of them.

@@ -4,7 +4,7 @@ about:
   id: intro-heading
   template: trestles
   image: images/profilepic.jpeg
-  image-shape: round
+  image-shape: rectangle
   links:
     - icon: envelope
       href: mailto:starce1@stolaf.edu
@@ -12,20 +12,32 @@ about:
       href: https://github.com/starce1
 ---
 
-:::{#intro-heading}
-
+::: {#intro-heading}
 ## Nick Starcevich
 
-Student at St. Olaf College <br>
-[MSCS Department](https://wp.stolaf.edu/mscs/) @ [St. Olaf College](https://wp.stolaf.edu/)
+Student at St. Olaf College <br> [MSCS Department](https://wp.stolaf.edu/mscs/) \@ [St. Olaf College](https://wp.stolaf.edu/)
 
 ### Education
 
-St. Olaf College | BA in Math with Statistics & Data Science concentration<br>
-2026 
+St. Olaf College \| BA in Math with Statistics & Data Science concentration \| 2026
 
-Spring Lake Park High School | 2022
+Spring Lake Park High School \| 2022
+
+### Academic Work Experience
+
+St. Olaf College \| Digital Scholarship Intern \| 2023 - Present
+
+Mathnasium \| Math Tutor \| 2021
+
 :::
+
+### Leadership & Co-Curricular Experience
+
+St. Olaf College Men's Swim Team \| Team Member \| 2022 - Present
+
+OLE Leadership Academy \| Program Member \| 2023 - 2024
+
+High School Boy's Swim Team \| Captain \| 2020 - 2022
 
 ### Get in Touch
 

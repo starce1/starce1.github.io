@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,20 +84,60 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">Maps</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-maps" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Maps</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-maps">    
+        <li>
+    <a class="dropdown-item" href="./part1.html" rel="" target="">
+ <span class="dropdown-text">US States</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./part2.html" rel="" target="">
+ <span class="dropdown-text">Wisconsin Districts</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <div class="quarto-navbar-tools ms-auto">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Nick Starcevich</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">US States</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wisconsin Districts</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -107,7 +147,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#nick-starcevich" id="toc-nick-starcevich" class="nav-link active" data-scroll-target="#nick-starcevich">Nick Starcevich</a>
   <ul class="collapse">
   <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
+  <li><a href="#academic-work-experience" id="toc-academic-work-experience" class="nav-link" data-scroll-target="#academic-work-experience">Academic Work Experience</a></li>
   </ul></li>
+  <li><a href="#leadership-co-curricular-experience" id="toc-leadership-co-curricular-experience" class="nav-link" data-scroll-target="#leadership-co-curricular-experience">Leadership &amp; Co-Curricular Experience</a></li>
   <li><a href="#get-in-touch" id="toc-get-in-touch" class="nav-link" data-scroll-target="#get-in-touch">Get in Touch</a></li>
   </ul>
 </nav>
@@ -120,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-about-trestles">
   <div class="about-entity">
     <img src="images/profilepic.jpeg" class="about-image
-  round " style="height: 20em; width: 20em;">
+  rectangle " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Nick Starcevich</h1>
@@ -145,13 +187,24 @@ ul.task-list li input[type="checkbox"] {
 <p>Student at St.&nbsp;Olaf College <br> <a href="https://wp.stolaf.edu/mscs/">MSCS Department</a> @ <a href="https://wp.stolaf.edu/">St.&nbsp;Olaf College</a></p>
 <section id="education" class="level3">
 <h3 data-anchor-id="education">Education</h3>
-<p>St.&nbsp;Olaf College | BA in Math with Statistics &amp; Data Science concentration<br> 2026</p>
+<p>St.&nbsp;Olaf College | BA in Math with Statistics &amp; Data Science concentration | 2026</p>
 <p>Spring Lake Park High School | 2022</p>
+</section>
+<section id="academic-work-experience" class="level3">
+<h3 data-anchor-id="academic-work-experience">Academic Work Experience</h3>
+<p>St.&nbsp;Olaf College | Digital Scholarship Intern | 2023 - Present</p>
+<p>Mathnasium | Math Tutor | 2021</p>
 </section>
 </section>
 </div></div>
 </div>
 
+<section id="leadership-co-curricular-experience" class="level3">
+<h3 data-anchor-id="leadership-co-curricular-experience">Leadership &amp; Co-Curricular Experience</h3>
+<p>St.&nbsp;Olaf College Men’s Swim Team | Team Member | 2022 - Present</p>
+<p>OLE Leadership Academy | Program Member | 2023 - 2024</p>
+<p>High School Boy’s Swim Team | Captain | 2020 - 2022</p>
+</section>
 <section id="get-in-touch" class="level3">
 <h3 data-anchor-id="get-in-touch">Get in Touch</h3>
 <p><strong>Email</strong>: <a href="mailto:starce1@stolaf.edu">starce1 at stolaf.edu</a></p>
@@ -390,6 +443,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Nick Starcevich, 2024<br> All content licensed under <i class="bi-badge-cc"></i> <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">(CC BY-NC-SA 4.0)</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Site built with <a href="https://quarto.org/">Quarto</a></div>
+  </div>
+</footer>
 
 
 

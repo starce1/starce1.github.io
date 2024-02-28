@@ -1,5 +1,0 @@
----
-title: "Maps"
----
-
-here are maps I created

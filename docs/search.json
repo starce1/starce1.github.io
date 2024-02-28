@@ -1,23 +1,30 @@
 [
   {
+    "objectID": "part2.html",
+    "href": "part2.html",
+    "title": "Wisconsin Districts",
+    "section": "",
+    "text": "This map represents the proportion of people who votes for republicans in 2012 (there seems to be missing data in fec16) in each Wisconsin district. The only two districts that ended up winning democrat are 2 and 3 which won by a lot since they are darker blues. There is evidence of gerrymandering in this map since some republican districts (especially 1, 7, and 8) were intentionally made to barely win republican so the state could come out that way overall."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Nick Starcevich",
     "section": "",
-    "text": "Student at St. Olaf College  MSCS Department @ St. Olaf College\n\n\nSt. Olaf College | BA in Math with Statistics & Data Science concentration 2026\nSpring Lake Park High School | 2022"
+    "text": "Student at St. Olaf College  MSCS Department @ St. Olaf College\n\n\nSt. Olaf College | BA in Math with Statistics & Data Science concentration | 2026\nSpring Lake Park High School | 2022\n\n\n\nSt. Olaf College | Digital Scholarship Intern | 2023 - Present\nMathnasium | Math Tutor | 2021"
   },
   {
     "objectID": "index.html#nick-starcevich",
     "href": "index.html#nick-starcevich",
     "title": "Nick Starcevich",
     "section": "",
-    "text": "Student at St. Olaf College  MSCS Department @ St. Olaf College\n\n\nSt. Olaf College | BA in Math with Statistics & Data Science concentration 2026\nSpring Lake Park High School | 2022"
+    "text": "Student at St. Olaf College  MSCS Department @ St. Olaf College\n\n\nSt. Olaf College | BA in Math with Statistics & Data Science concentration | 2026\nSpring Lake Park High School | 2022\n\n\n\nSt. Olaf College | Digital Scholarship Intern | 2023 - Present\nMathnasium | Math Tutor | 2021"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Maps",
+    "objectID": "part1.html",
+    "href": "part1.html",
+    "title": "US States",
     "section": "",
-    "text": "here are maps I created"
+    "text": "NOAA defines “violent tornadoes” as tornadoes rated EF4/F4 or higher. Lets see what the map of those looks like!\n\n\n\n\n\nWhat we gain from these maps is some information about tornadoes by state. The first map shows that they seem to happen just about everywhere, but since Texas is the biggest state it has by far the most. When putting into consideration whether tornadoes are violent or not we get a better idea of where bad tornadoes happen as well as the frequency of them."
   }
 ]
