@@ -15,8 +15,6 @@ about:
 ::: {#intro-heading}
 ## Nick Starcevich
 
-Student at St. Olaf College <br> [MSCS Department](https://wp.stolaf.edu/mscs/) \@ [St. Olaf College](https://wp.stolaf.edu/)
-
 ### Education
 
 St. Olaf College \| BA in Math with Statistics & Data Science concentration \| 2026
@@ -41,7 +39,7 @@ High School Boy's Swim Team \| Captain \| 2020 - 2022
 
 ### Get in Touch
 
-**Email**: <a href='mailto:starce1@stolaf.edu'>starce1 at stolaf.edu</a>
+**Email**: <a href='mailto:starce1@stolaf.edu'>starce1@stolaf.edu</a>
 
 **Address**: 1500 St. Olaf Ave, Northfield, MN 55057
 
