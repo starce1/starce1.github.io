@@ -1,0 +1,99 @@
+---
+title: "Mini Project 2"
+author: "Nick Starcevich"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| message: false
+#| include: false
+
+# Initial packages required
+library(tidyverse)
+library(viridis)
+```
+
+## The power of a statistical test
+
+The power of a statistical test is the probability that it rejects the null hypothesis when the null hypothesis is false.  In other words, it's the probability that a statistical test can detect when a true difference exists.  The power depends on a number of factors. We will explore how the factors of variability in the data and size of the true difference in means effects the power curves.
+
+```{r}
+#| message: false
+#| include: false
+
+five_power_curves_sd_6_to_14 <- function(truediff) {
+  # set parameters for two-sample t-test
+  mean1 <- 100
+  mean2 <- mean1 + truediff
+  sd1 <- seq(from = 6, to = 14, by = 2)
+  sd2 <- seq(from = 6, to = 14, by = 2)
+  numsims <- 1000
+  
+  # plot a power curve (vs. sample size)
+  #   For now, we assume sample sizes equal, SDs equal, and truediff is 5
+  power1 <- vector("double", 30*5)
+  sampsize1 <- vector("double", 30*5)
+  sd <- vector("double", 30*5)
+  iter <- 0
+  for(k in 1:5) {
+    for (j in 1:30)  {
+      n1 <- 5 * j
+      n2 <- n1
+    
+      significant <- vector("logical", numsims)
+      for (i in 1:numsims) {
+        samp1 <- rnorm(n1, mean1, sd1[k])
+        samp2 <- rnorm(n2, mean2, sd2[k])
+        p_value <- t.test(x = samp1, y = samp2)$p.value
+        significant[i] <- (p_value < .05)
+      }
+    iter <- iter + 1
+    power1[iter] <- mean(significant)
+    sampsize1[iter] <- n1
+    sd[iter] <- sd1[k]
+    }
+  }
+  
+  
+  
+  plotdata <- tibble(n_per_group = sampsize1, power = power1, sd = as.factor(sd))
+  ggplot(plotdata, aes(x = n_per_group, y = power, color = sd)) +
+    geom_smooth(se = FALSE) +
+    geom_line(linewidth = 1) +
+    geom_hline(yintercept = .80, color = "red") +
+    scale_color_viridis(discrete = T, option = "turbo") +
+    labs(x = "Sample Size", 
+         y = "Power", 
+         color = "Standard Deviation",
+         title = paste("Power Curves With Varying Standard Deviation and Mean Difference of", truediff) )
+}
+```
+
+## Analysis
+
+```{r}
+#| message: false
+#| echo: false
+five_power_curves_sd_6_to_14(3)
+```
+
+```{r}
+#| message: false
+#| echo: false
+five_power_curves_sd_6_to_14(5)
+```
+
+```{r}
+#| message: false
+#| echo: false
+five_power_curves_sd_6_to_14(7)
+```
+
+These three graphs use simulated data where the mean in one distribution is 100 and mean in the other is determined by the mean difference where the mean is the difference higher than 100 (so the second mean in these three graphs are 103, 105, and 107). All of these plots have five curves with standard deviation ranging from 6 to 14 by intervals of 2. Thre are two lines for each standard deviation in each plot where the ones that are jagged are created from the simulated observations and the smooth ones are the "lines of best fit".
+
+What we are looking for is how long it takes for these power curves to reach a power of 0.8 (ie. that the chance the simulated test can decect a significant difference is 80%). We are looking for this to see how big of a sample size we'd need in the real world for certain circumstances including the factors we are investigating.
+
+It is evident from these plots that the higher the variability (standard deviation), the larger the required sample size is to prove a difference. This makes sense since it would probably be easier to prove a difference when things aren't too different (variating) everytime you run the test.
+
+It is also evident that a higher difference in means that a smaller sample size is needed to show a difference which is clear since the bigger the difference is the easier it should be to show that there is a difference.

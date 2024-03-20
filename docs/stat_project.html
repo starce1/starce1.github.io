@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nick Starcevich">
 
-<title>Nick Starcevich - Wisconsin Districts</title>
+<title>Nick Starcevich - Mini Project 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part2.html">Wisconsin Districts</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./stat_project.html">Mini Project 2</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -136,14 +137,8 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">US States</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./part2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Wisconsin Districts</span></a>
+  <a href="./stat_project.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Mini Project 2</span></a>
   </div>
 </li>
     </ul>
@@ -152,20 +147,33 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-power-of-a-statistical-test" id="toc-the-power-of-a-statistical-test" class="nav-link active" data-scroll-target="#the-power-of-a-statistical-test">The power of a statistical test</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Wisconsin Districts</h1>
+<h1 class="title">Mini Project 2</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nick Starcevich </p>
+          </div>
+  </div>
     
   
     
@@ -174,14 +182,34 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="the-power-of-a-statistical-test" class="level2">
+<h2 class="anchored" data-anchor-id="the-power-of-a-statistical-test">The power of a statistical test</h2>
+<p>The power of a statistical test is the probability that it rejects the null hypothesis when the null hypothesis is false. In other words, it’s the probability that a statistical test can detect when a true difference exists. The power depends on a number of factors. We will explore how the factors of variability in the data and size of the true difference in means effects the power curves.</p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="part2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="stat_project_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>This map represents the proportion of people who voted for republican candidates in 2016 in each Wisconsin district. The only three districts that ended up winning democrat are 2, 3, and 4 which won by a lot since they are darker blues. There is evidence of gerrymandering in this map since all republican winning districts were intentionally made to barely win republican (which is seen in this map by the extremely slight tints of red for republican winning districts) so the state could come out winning republican overall. The gerrymandering was especially bad where districts 3 and 4 were so lopsided for democrats that they were such large blowouts that no republican candidates even ran since many democrats were intentionally lumped into these districts by the republicans that drew them so they could gain an advantage.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="stat_project_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="stat_project_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>These three graphs use simulated data where the mean in one distribution is 100 and mean in the other is determined by the mean difference where the mean is the difference higher than 100 (so the second mean in these three graphs are 103, 105, and 107). All of these plots have five curves with standard deviation ranging from 6 to 14 by intervals of 2. Thre are two lines for each standard deviation in each plot where the ones that are jagged are created from the simulated observations and the smooth ones are the “lines of best fit”.</p>
+<p>What we are looking for is how long it takes for these power curves to reach a power of 0.8 (ie. that the chance the simulated test can decect a significant difference is 80%). We are looking for this to see how big of a sample size we’d need in the real world for certain circumstances including the factors we are investigating.</p>
+<p>It is evident from these plots that the higher the variability (standard deviation), the larger the required sample size is to prove a difference. This makes sense since it would probably be easier to prove a difference when things aren’t too different (variating) everytime you run the test.</p>
+<p>It is also evident that a higher difference in means that a smaller sample size is needed to show a difference which is clear since the bigger the difference is the easier it should be to show that there is a difference.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,10 +1,31 @@
 [
   {
-    "objectID": "part2.html",
-    "href": "part2.html",
-    "title": "Wisconsin Districts",
+    "objectID": "stat_project.html",
+    "href": "stat_project.html",
+    "title": "Mini Project 2",
     "section": "",
-    "text": "This map represents the proportion of people who voted for republican candidates in 2016 in each Wisconsin district. The only three districts that ended up winning democrat are 2, 3, and 4 which won by a lot since they are darker blues. There is evidence of gerrymandering in this map since all republican winning districts were intentionally made to barely win republican (which is seen in this map by the extremely slight tints of red for republican winning districts) so the state could come out winning republican overall. The gerrymandering was especially bad where districts 3 and 4 were so lopsided for democrats that they were such large blowouts that no republican candidates even ran since many democrats were intentionally lumped into these districts by the republicans that drew them so they could gain an advantage."
+    "text": "The power of a statistical test is the probability that it rejects the null hypothesis when the null hypothesis is false. In other words, it’s the probability that a statistical test can detect when a true difference exists. The power depends on a number of factors. We will explore how the factors of variability in the data and size of the true difference in means effects the power curves."
+  },
+  {
+    "objectID": "stat_project.html#the-power-of-a-statistical-test",
+    "href": "stat_project.html#the-power-of-a-statistical-test",
+    "title": "Mini Project 2",
+    "section": "",
+    "text": "The power of a statistical test is the probability that it rejects the null hypothesis when the null hypothesis is false. In other words, it’s the probability that a statistical test can detect when a true difference exists. The power depends on a number of factors. We will explore how the factors of variability in the data and size of the true difference in means effects the power curves."
+  },
+  {
+    "objectID": "stat_project.html#analysis",
+    "href": "stat_project.html#analysis",
+    "title": "Mini Project 2",
+    "section": "Analysis",
+    "text": "Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese three graphs use simulated data where the mean in one distribution is 100 and mean in the other is determined by the mean difference where the mean is the difference higher than 100 (so the second mean in these three graphs are 103, 105, and 107). All of these plots have five curves with standard deviation ranging from 6 to 14 by intervals of 2. Thre are two lines for each standard deviation in each plot where the ones that are jagged are created from the simulated observations and the smooth ones are the “lines of best fit”.\nWhat we are looking for is how long it takes for these power curves to reach a power of 0.8 (ie. that the chance the simulated test can decect a significant difference is 80%). We are looking for this to see how big of a sample size we’d need in the real world for certain circumstances including the factors we are investigating.\nIt is evident from these plots that the higher the variability (standard deviation), the larger the required sample size is to prove a difference. This makes sense since it would probably be easier to prove a difference when things aren’t too different (variating) everytime you run the test.\nIt is also evident that a higher difference in means that a smaller sample size is needed to show a difference which is clear since the bigger the difference is the easier it should be to show that there is a difference."
+  },
+  {
+    "objectID": "part1.html",
+    "href": "part1.html",
+    "title": "US States",
+    "section": "",
+    "text": "NOAA defines “violent tornadoes” as tornadoes rated EF4/F4 or higher. Lets see what the map of those looks like!\n\n\n\n\n\nWhat we gain from these maps is some information about tornadoes by state. The first map shows that they seem to happen just about everywhere, but since Texas is the biggest state it has by far the most. When putting into consideration whether tornadoes are violent or not we get a better idea of where bad tornadoes happen as well as the frequency of them."
   },
   {
     "objectID": "index.html",
@@ -21,10 +42,10 @@
     "text": "St. Olaf College | BA in Math with Statistics & Data Science concentration | 2026\nSpring Lake Park High School | 2022\n\n\n\nSt. Olaf College | Digital Scholarship Intern | 2023 - Present\nMathnasium | Math Tutor | 2021"
   },
   {
-    "objectID": "part1.html",
-    "href": "part1.html",
-    "title": "US States",
+    "objectID": "part2.html",
+    "href": "part2.html",
+    "title": "Wisconsin Districts",
     "section": "",
-    "text": "NOAA defines “violent tornadoes” as tornadoes rated EF4/F4 or higher. Lets see what the map of those looks like!\n\n\n\n\n\nWhat we gain from these maps is some information about tornadoes by state. The first map shows that they seem to happen just about everywhere, but since Texas is the biggest state it has by far the most. When putting into consideration whether tornadoes are violent or not we get a better idea of where bad tornadoes happen as well as the frequency of them."
+    "text": "This map represents the proportion of people who voted for republican candidates in 2016 in each Wisconsin district. The only three districts that ended up winning democrat are 2, 3, and 4 which won by a lot since they are darker blues. There is evidence of gerrymandering in this map since all republican winning districts were intentionally made to barely win republican (which is seen in this map by the extremely slight tints of red for republican winning districts) so the state could come out winning republican overall. The gerrymandering was especially bad where districts 3 and 4 were so lopsided for democrats that they were such large blowouts that no republican candidates even ran since many democrats were intentionally lumped into these districts by the republicans that drew them so they could gain an advantage."
   }
 ]

@@ -10,14 +10,20 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - sidebar:sidebar1
+      - sidebar:miniproj1
+      - sidebar:miniproj2
 
   sidebar: 
-    - id: sidebar1
+    - id: miniproj1
       title: "Maps"
       contents: 
         - part1.qmd
         - part2.qmd
+        
+    - id: miniproj2
+      title: "Stats"
+      contents: 
+        - stat_project.qmd
 
   page-footer:
     left: |
