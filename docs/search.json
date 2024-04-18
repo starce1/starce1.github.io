@@ -42,13 +42,6 @@
     "text": "St. Olaf College | BA in Math with Statistics & Data Science concentration | 2026\nSpring Lake Park High School | 2022\n\n\n\nSt. Olaf College | Digital Scholarship Intern | 2023 - Present\nMathnasium | Math Tutor | 2021"
   },
   {
-    "objectID": "part2.html",
-    "href": "part2.html",
-    "title": "Wisconsin Districts",
-    "section": "",
-    "text": "This map represents the proportion of people who voted for republican candidates in 2016 in each Wisconsin district. The only three districts that ended up winning democrat are 2, 3, and 4 which won by a lot since they are darker blues. There is evidence of gerrymandering in this map since all republican winning districts were intentionally made to barely win republican (which is seen in this map by the extremely slight tints of red for republican winning districts) so the state could come out winning republican overall. The gerrymandering was especially bad where districts 3 and 4 were so lopsided for democrats that they were such large blowouts that no republican candidates even ran since many democrats were intentionally lumped into these districts by the republicans that drew them so they could gain an advantage."
-  },
-  {
     "objectID": "nyt_sentiment_analysis.html",
     "href": "nyt_sentiment_analysis.html",
     "title": "Mini Project Part 3",
@@ -75,5 +68,12 @@
     "title": "Mini Project Part 3",
     "section": "Conclusion",
     "text": "Conclusion\nUppercase titles tend to be more negative than lowercase titles while even though the subtitles with uppercase words tend to be more neutral than the other two categories, they are still slightly negative."
+  },
+  {
+    "objectID": "part2.html",
+    "href": "part2.html",
+    "title": "Wisconsin Districts",
+    "section": "",
+    "text": "This map represents the proportion of people who voted for republican candidates in 2016 in each Wisconsin district. The only three districts that ended up winning democrat are 2, 3, and 4 which won by a lot since they are darker blues. There is evidence of gerrymandering in this map since all republican winning districts were intentionally made to barely win republican (which is seen in this map by the extremely slight tints of red for republican winning districts) so the state could come out winning republican overall. The gerrymandering was especially bad where districts 3 and 4 were so lopsided for democrats that they were such large blowouts that no republican candidates even ran since many democrats were intentionally lumped into these districts by the republicans that drew them so they could gain an advantage."
   }
 ]
