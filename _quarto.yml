@@ -12,6 +12,7 @@ website:
         text: Home
       - sidebar:miniproj1
       - sidebar:miniproj2
+      - sidebar:miniproj3
 
   sidebar: 
     - id: miniproj1
@@ -24,6 +25,11 @@ website:
       title: "Stats"
       contents: 
         - stat_project.qmd
+        
+    - id: miniproj3
+      title: "Strings"
+      contents: 
+        - nyt_sentiment_analysis.qmd
 
   page-footer:
     left: |
